@@ -1,0 +1,32 @@
+{
+    "version": 2,
+    "functions": {
+        "api/index.php": { "runtime": "vercel-php@0.3.1" }
+    },
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
+    ],
+    "env": {
+        "APP_NAME": "62teknologi-backend-test",
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://62teknologi-backend-test.vercel.app",
+
+        "LOG_CHANNEL": "stack",
+
+        "DB_CONNECTION": "mysql",
+        "DB_HOST": "94e.h.filess.io",
+        "DB_PORT": 3307,
+        "DB_DATABASE": "enamdua_doeswithin",
+        "DB_USERNAME": "enamdua_doeswithin",
+        "DB_PASSWORD": "58d3a41f53850b317c92df68533dd8da23d3382f",
+
+        "CACHE_DRIVER": "file",
+        "QUEUE_CONNECTION": "sync",
+
+        "ACCESS_KEY": "62tech"
+    }
+}

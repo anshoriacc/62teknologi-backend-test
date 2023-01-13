@@ -9,7 +9,7 @@ class KeyMiddleware
 {
     public function handle($request, Closure $next)
     {
-        if ($request->header('x-access-key') !== '62tech') {
+        if ($request->header('x-access-key') !== env('ACCESS_KEY')) {
             return Formatter::response(401, "Unauthorized", null, "Access key empty or invalid.");
         }
 
