@@ -154,7 +154,7 @@ class BusinessController extends Controller
 
         if (
             ($name === NULL) ||
-            ($images === NULL) ||
+            // ($images === NULL) ||
             ($transactions === NULL) ||
             ($price === NULL) ||
             ($phone === NULL) ||
