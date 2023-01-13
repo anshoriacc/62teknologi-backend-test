@@ -152,24 +152,6 @@ class BusinessController extends Controller
         $zip_code = $request->input("zip_code");
         $categories = $request->input("categories");
 
-        if (
-            ($name === NULL) ||
-            // ($images === NULL) ||
-            ($transactions === NULL) ||
-            ($price === NULL) ||
-            ($phone === NULL) ||
-            ($address1 === NULL) ||
-            ($latitude === NULL) ||
-            ($longitude === NULL) ||
-            ($city === NULL) ||
-            ($state === NULL) ||
-            ($country === NULL) ||
-            ($zip_code === NULL) ||
-            ($categories === NULL)
-        ) {
-            return Formatter::response(400, "Error.", NULL, "Fill all required field.");
-        }
-
         $insert = DB::transaction(function () use (
             $id,
             $name,
