@@ -19,7 +19,7 @@
 
         "DB_CONNECTION": "mysql",
         "DB_HOST": "94e.h.filess.io",
-        "DB_PORT": 3307,
+        "DB_PORT": "3307",
         "DB_DATABASE": "enamdua_doeswithin",
         "DB_USERNAME": "enamdua_doeswithin",
         "DB_PASSWORD": "58d3a41f53850b317c92df68533dd8da23d3382f",
