@@ -17,6 +17,7 @@ class BusinessController extends Controller
 {
     public function search(Request $request)
     {
+        $id = $request["id"];
         $q = $request["q"];
         $category = $request["category"];
         $location = $request["location"];
@@ -45,6 +46,9 @@ class BusinessController extends Controller
         )
             ->leftJoin("categories", "businesses.id", "=", "categories.business_id")
             ->leftJoin("locations", "businesses.id", "=", "locations.business_id")
+            ->when(!empty($id), function ($query) use ($id) {
+                return $query->where("businesses.id", "=", $id);
+            })
             ->when(!empty($q), function ($query) use ($q) {
                 return $query->where("businesses.name", "LIKE", "%" . $q . "%");
             })
