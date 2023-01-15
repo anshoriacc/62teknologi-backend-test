@@ -87,7 +87,7 @@ class BusinessController extends Controller
         $result = [];
 
         foreach ($businesses as $business) {
-            $location = Location::select("address1", "address2", "address3", "city", "state", "longitude", "longitude", "zip_code", "country")
+            $location = Location::select("address1", "address2", "address3", "city", "state", "latitude", "longitude", "zip_code", "country")
                 ->where("business_id", $business["id"])->limit(1)->get()->toArray();
             $images = Image::select("url")->where("business_id", $business["id"])->limit(1)->get()->toArray();
             $images = array_map(function ($image) {
